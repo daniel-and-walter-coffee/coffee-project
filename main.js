@@ -39,7 +39,7 @@ function updateCoffees(e) {
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 
 
-var coffees = [
+var coffees2 = [
     {id: 1, name: 'Light City', roast: 'light'},
     {id: 2, name: 'Half City', roast: 'light'},
     {id: 3, name: 'Cinnamon', roast: 'light'},
@@ -56,10 +56,13 @@ var coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
+if(localStorage.getItem('coffees') === null){
+    localStorage.setItem('coffees', JSON.stringify(coffees2))
+    console.log('test');
+}
 
-// localStorage.setItem('coffees', JSON.stringify(coffees))
 
-// let coffees = JSON.parse(localStorage.getItem("coffees"))
+let coffees = JSON.parse(localStorage.getItem("coffees"))
 
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
@@ -124,3 +127,25 @@ function updateOption() {
 roastSelection.addEventListener('change', updateOption)
 
 // localStorage.setItem('coffees', coffees)
+
+// BONUS
+let newButton = document.querySelector("#newButton")
+
+let newCoffee = (e) => {
+    e.preventDefault()
+    let name = document.getElementById('coffee')
+    let roast = document.getElementById('roast')
+    let newCoffee = {
+        id: coffees.length + 1,
+        name: name.value,
+        roast: roast.value
+    }
+    console.log(newCoffee)
+    coffees.push(newCoffee)
+
+    localStorage.setItem('coffees', JSON.stringify(coffees))
+
+    tbody.innerHTML = renderCoffees(coffees);
+}
+
+newButton.addEventListener('click', newCoffee)
