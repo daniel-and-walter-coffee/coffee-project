@@ -1,11 +1,10 @@
 "use strict"
 
 function renderCoffee(coffee) {
-    var html = '<tr class="coffee">';
-    html += '<td>' + coffee.id + '</td>';
-    html += '<td>' + coffee.name + '</td>';
-    html += '<td>' + coffee.roast + '</td>';
-    html += '</tr>';
+    var html = '<div class="coffee">';
+    html += '<h4>' + coffee.name + '</h4>';
+    html += '<p>' + coffee.roast + '</p>';
+    html += '</div>';
 
     return html;
 }
@@ -38,6 +37,8 @@ function updateCoffees(e) {
 }
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
+
+
 var coffees = [
     {id: 1, name: 'Light City', roast: 'light'},
     {id: 2, name: 'Half City', roast: 'light'},
@@ -55,6 +56,11 @@ var coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
+
+// localStorage.setItem('coffees', JSON.stringify(coffees))
+
+// let coffees = JSON.parse(localStorage.getItem("coffees"))
+
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
@@ -62,3 +68,59 @@ var roastSelection = document.querySelector('#roast-selection');
 tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
+
+// Todo 3
+// Target submit button
+let searchButton = document.querySelector('#searchButton')
+
+// Target input field value
+let searchValue = document.querySelector('#search-input')
+
+function updateSearch(e) {
+    e.preventDefault(); // don't submit the form, we just want to update the data
+    var searchTerm = searchValue.value;
+    var filteredCoffees = [];
+    coffees.forEach(function(coffee) {
+        if (coffee.name.includes(searchTerm)) {
+            filteredCoffees.push(coffee);
+        }
+    });
+    tbody.innerHTML = renderCoffees(filteredCoffees);
+}
+// Make new function that is similar to update, but with new parameters
+
+searchButton.addEventListener('click', updateSearch)
+
+// TODO 4
+// add event listener to the keystrokes input
+
+function updateKey() {
+
+    var searchTerm = searchValue.value;
+    var filteredCoffees = [];
+    coffees.forEach(function(coffee) {
+        if (coffee.name.includes(searchTerm)) {
+            filteredCoffees.push(coffee);
+        }
+    });
+    tbody.innerHTML = renderCoffees(filteredCoffees);
+}
+
+searchValue.addEventListener('keyup', updateKey)
+
+
+function updateOption() {
+
+    var selectedRoast = roastSelection.value;
+    var filteredCoffees = [];
+    coffees.forEach(function(coffee) {
+        if (coffee.roast === selectedRoast) {
+            filteredCoffees.push(coffee);
+        }
+    });
+    tbody.innerHTML = renderCoffees(filteredCoffees);
+}
+
+roastSelection.addEventListener('change', updateOption)
+
+// localStorage.setItem('coffees', coffees)
