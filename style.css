@@ -15,6 +15,7 @@ td, th {
     display: flex;
     padding: 10px;
     width: 200px;
+    max-height: 80px;
     align-items: center;
     transition: transform 0.75s ease;
     border: 2px solid black;
@@ -56,8 +57,6 @@ p {
     padding: 10px;
     margin-bottom: 200px;
     border: 2px solid black;
-    background: black;
-    color: white;
 }
 
 .custom-btn {
@@ -81,7 +80,7 @@ p {
 
 .custom-btn:hover {
     transform: scale(1.1);
-    box-shadow: 0px 0px 15px white;
+    box-shadow: 0px 0px 15px black;
 }
 
 /*FOR ADD FORM*/
@@ -89,6 +88,8 @@ p {
     display: none;
 }
 
+
+/*SECOND FORM STYLING*/
 .discover-brew {
     border: none;
     width: 155px;
