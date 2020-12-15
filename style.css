@@ -49,6 +49,41 @@ p {
     font-size: 1.1rem;
 }
 
+/*FORM CUSTOM*/
+.form-custom {
+    max-width: 400px;
+    height: 150px;
+    padding: 10px;
+    margin-bottom: 200px;
+    border: 2px solid black;
+    background: black;
+    color: white;
+}
+
+.custom-btn {
+    margin-top: 10px;
+    width: 70px;
+    height: 40px;
+    background: white;
+    transition: transform 0.75s ease;
+    border: 2px solid black;
+}
+
+.form-control {
+    background: lightsteelblue;
+}
+
+.form-control:focus {
+    /*transform: scale(1.1);*/
+    /*box-shadow: 0px 0px 10px black;*/
+    border: 2px solid black;
+}
+
+.custom-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 15px white;
+}
+
 /*FOR ADD FORM*/
 #add-form {
     display: none;
