@@ -28,6 +28,11 @@ function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
     var filteredCoffees = [];
+    if (selectedRoast == "all"){
+        console.log("success");
+        tbody.innerHTML = renderCoffees(coffees);
+        return
+    }
     coffees.forEach(function(coffee) {
         if (coffee.roast === selectedRoast) {
             filteredCoffees.push(coffee);
@@ -35,6 +40,9 @@ function updateCoffees(e) {
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
+
+
+
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 
@@ -55,6 +63,8 @@ var coffees2 = [
     {id: 13, name: 'Italian', roast: 'dark'},
     {id: 14, name: 'French', roast: 'dark'},
 ];
+
+
 
 if(localStorage.getItem('coffees') === null){
     localStorage.setItem('coffees', JSON.stringify(coffees2))
