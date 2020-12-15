@@ -30,21 +30,22 @@
         </div>
     </form>
 
-    <form class="find-brew form-custom card">
-        <label for="search-input"></label>
-        <div class="coffee-search">
-        <input class="discover-brew" type="text" id="search-input" name="search-input" placeholder="Discover your brew"><i class="fas fa-coffee"></i>
+    <form class="form-custom card">
+        <div class="form-group">
+        <label for="search-input">Search:</label>
+
+        <input class="form-control" type="text" id="search-input" name="search-input" placeholder="Discover your brew">
+            <input class="custom-btn" type="submit" id="searchButton" value="Submit" >
         </div>
-        <div class="coffee-explore">
-        <input class="explore" type="submit" id="searchButton" value="Submit" ><i class="fas fa-sign-in-alt"></i>
-        </div>
+
+<!--            <i class="fas fa-sign-in-alt"></i>        -->
     </form>
 
 <!--    <button id="add-trigger">Wanna add your favorite?</button>-->
     <form class="form-custom card">
         <div class="form-group">
             <label for="coffee">Name of Coffee</label>
-            <input type="text" name="coffee" id="coffee" class="form-control">
+            <input type="text" name="coffee" id="coffee" class="form-control" placeholder="Name">
         </div>
         <div class="form-group">
             <label for="roast">Roast</label>
@@ -61,7 +62,11 @@
 
     </div>
 
-        <div id="coffees" class="col-12 col-md-6"></div>
+        <div class="col-12 col-md-6" id="parent">
+            <div id="coffees">
+
+            </div>
+        </div>
 
     <script src="https://kit.fontawesome.com/10517977d2.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

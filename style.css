@@ -54,22 +54,29 @@ td, th {
 }
 
 #coffees {
-    width: 95%;
-    margin: 10px auto;
+    /*width: 95%;*/
+    /*margin: 10px auto;*/
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     flex-wrap: wrap;
 
     background: var(--dark-background);
     color: white;
 }
 
+#parent {
+    min-height: 606px;
+    background: var(--dark-background);
+    color: white;
+
+
+    width: 95%;
+    margin: 0px auto;
+}
+
 #coffee-forms {
     padding: 10px;
-    margin: 10px auto;
-
-
-
+    margin: 0px auto;
 
     /*background: #bccad6;*/
     /*background: #8DA7BE;;*/
