@@ -92,14 +92,15 @@ p {
 /*SECOND FORM STYLING*/
 .discover-brew {
     border: none;
-    width: 155px;
+    width: 145px;
     background-color: transparent;
+    margin:4px;
 }
 
-::placeholder{
-    color: black;
-    opacity: 1;
-}
+/*::placeholder{*/
+/*    color: black;*/
+/*    opacity: 9;*/
+/*}*/
 
 .explore {
     border: none;
@@ -117,12 +118,17 @@ p {
 
 .fa-coffee {
     padding-top: 6px;
+    margin: 6px 6px 6px 0;
+    padding-right: 10px;
 }
 
-.fa-search {
-    margin-left: 6px;
+.fa-sign-in-alt {
+    margin-left: 0;
+    margin-right: 6px;
+    margin-bottom: 3px;
     padding-top: 6px;
     padding-left: 3px;
+    padding-bottom: 3px;
 }
 
 .coffee-search {
