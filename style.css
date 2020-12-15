@@ -88,3 +88,61 @@ p {
 #add-form {
     display: none;
 }
+
+.discover-brew {
+    border: none;
+    width: 155px;
+    background-color: transparent;
+}
+
+::placeholder{
+    color: black;
+    opacity: 1;
+}
+
+.explore {
+    border: none;
+    background-color: transparent;
+}
+
+.find-brew {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*border: 2px solid darkslateblue;*/
+    height: 100px;
+    /*width: 100px;*/
+}
+
+.fa-coffee {
+    padding-top: 6px;
+}
+
+.fa-search {
+    margin-left: 6px;
+    padding-top: 6px;
+    padding-left: 3px;
+}
+
+.coffee-search {
+    display: flex;
+    justify-content: center;
+    border:  2px solid black;
+    margin-bottom: 20px;
+    padding: 4px;
+    -moz-box-shadow:    inset 0 0 10px #000000;
+    -webkit-box-shadow: inset 0 0 10px #000000;
+    box-shadow:         inset 0 0 10px #000000;
+    border-radius: 25px;
+}
+
+.coffee-explore {
+    display: flex;
+    justify-content: center;
+    border: 2px solid black;
+    padding: 4px;
+    -moz-box-shadow:    inset 0 0 10px #000000;
+    -webkit-box-shadow: inset 0 0 10px #000000;
+    box-shadow:         inset 0 0 10px #000000;
+    border-radius: 25px;
+}
