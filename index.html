@@ -7,18 +7,27 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <h1 class="display-4">Coffee!</h1>
-    <h3>Java beans are great</h3>
-    <form>
-        <label for="roast-selection"></label>
-        <select id="roast-selection">
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-            <option>all</option>
-        </select>
-        <input id="submit" type="submit" />
+<body class="row">
+
+    <div class="col-12">
+        <h1 class="display-4">Coffee!</h1>
+        <h3>Java beans are great</h3>
+    </div>
+
+
+    <div class="col-12 col-md-6">
+
+    <form class="form-custom card">
+        <div class="form-group">
+            <label for="roast-selection">Search by Roast</label>
+            <select id="roast-selection" class="form-control">
+                <option>light</option>
+                <option>medium</option>
+                <option>dark</option>
+                <option>all</option>
+            </select>
+            <input id="submit" type="submit" class="custom-btn"/>
+        </div>
     </form>
 
     <form class="find-brew">
@@ -46,7 +55,9 @@
         <input type="submit" id="newButton">
     </form>
 
-        <div id="coffees"></div>
+    </div>
+
+        <div id="coffees" class="col-12 col-md-6"></div>
 
     <script src="https://kit.fontawesome.com/10517977d2.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

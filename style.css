@@ -15,6 +15,7 @@ td, th {
     display: flex;
     padding: 10px;
     width: 200px;
+    max-height: 80px;
     align-items: center;
     transition: transform 0.75s ease;
     border: 2px solid black;
@@ -49,11 +50,46 @@ p {
     font-size: 1.1rem;
 }
 
+/*FORM CUSTOM*/
+.form-custom {
+    max-width: 400px;
+    height: 150px;
+    padding: 10px;
+    margin-bottom: 200px;
+    border: 2px solid black;
+}
+
+.custom-btn {
+    margin-top: 10px;
+    width: 70px;
+    height: 40px;
+    background: white;
+    transition: transform 0.75s ease;
+    border: 2px solid black;
+}
+
+.form-control {
+    background: lightsteelblue;
+}
+
+.form-control:focus {
+    /*transform: scale(1.1);*/
+    /*box-shadow: 0px 0px 10px black;*/
+    border: 2px solid black;
+}
+
+.custom-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 15px black;
+}
+
 /*FOR ADD FORM*/
 #add-form {
     display: none;
 }
 
+
+/*SECOND FORM STYLING*/
 .discover-brew {
     border: none;
     width: 155px;
