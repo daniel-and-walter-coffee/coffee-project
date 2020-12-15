@@ -1,3 +1,20 @@
+:root {
+    --dark-background: #393D3F;
+
+    /*background: #454140;*/
+    /*background: #667292;*/
+
+    --med-background: #95AFBA;
+    --light-background: #e6f5ff;
+}
+
+/*#coffee-light {*/
+/*    background: #bccad6;*/
+/*    background: #deeaee;*/
+/*    background: #ccebff;*/
+/*    background: #e6f5ff;*/
+/*}*/
+
 body {
     margin: 0;
 }
@@ -20,6 +37,8 @@ td, th {
     transition: transform 0.75s ease;
     border: 2px solid black;
     margin: 5px 10px;
+    background: var(--light-background);
+    color: black;
 }
 
 
@@ -31,7 +50,7 @@ td, th {
 
 .coffee:hover {
     transform: scale(1.1);
-    box-shadow: 0px 0px 10px black;
+    box-shadow: 0px 0px 10px var(--light-background);
 }
 
 #coffees {
@@ -40,6 +59,22 @@ td, th {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
+
+    background: var(--dark-background);
+    color: white;
+}
+
+#coffee-forms {
+    padding: 10px;
+    margin: 10px auto;
+
+
+
+
+    /*background: #bccad6;*/
+    /*background: #8DA7BE;;*/
+    /*background:  #92a8d1;*/
+    background: var(--med-background);
 }
 
 h4 {
@@ -53,10 +88,11 @@ p {
 /*FORM CUSTOM*/
 .form-custom {
     max-width: 400px;
-    height: 150px;
+    /*height: 150px;*/
     padding: 10px;
-    margin-bottom: 200px;
+    /*margin-bottom: 200px;*/
     border: 2px solid black;
+    margin: 5px auto;
 }
 
 .custom-btn {
@@ -84,9 +120,9 @@ p {
 }
 
 /*FOR ADD FORM*/
-#add-form {
-    display: none;
-}
+/*#add-form {*/
+/*    display: none;*/
+/*}*/
 
 
 /*SECOND FORM STYLING*/
@@ -112,7 +148,7 @@ p {
     flex-direction: column;
     align-items: center;
     /*border: 2px solid darkslateblue;*/
-    height: 100px;
+    height: 130px;
     /*width: 100px;*/
 }
 

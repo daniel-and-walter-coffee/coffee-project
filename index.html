@@ -15,7 +15,7 @@
     </div>
 
 
-    <div class="col-12 col-md-6">
+    <div id="coffee-forms" class="col-12 col-md-6">
 
     <form class="form-custom card">
         <div class="form-group">
@@ -30,7 +30,7 @@
         </div>
     </form>
 
-    <form class="find-brew">
+    <form class="find-brew form-custom card">
         <label for="search-input"></label>
         <div class="coffee-search">
         <input class="discover-brew" type="text" id="search-input" name="search-input" placeholder="Discover your brew"><i class="fas fa-coffee"></i>
@@ -40,19 +40,23 @@
         </div>
     </form>
 
-    <button id="add-trigger">Wanna add your favorite?</button>
-    <form id="add-form">
-        <label for="coffee">Name of Coffee</label>
-        <input type="text" name="coffee" id="coffee">
-        <label for="roast">Roast</label>
-        <select type="text" name="roast" id="roast">
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-            <option>all</option>
-<!--          Bonus Task #1:Added a fourth option to select all roasts for roast type-->
-        </select>
-        <input type="submit" id="newButton">
+<!--    <button id="add-trigger">Wanna add your favorite?</button>-->
+    <form class="form-custom card">
+        <div class="form-group">
+            <label for="coffee">Name of Coffee</label>
+            <input type="text" name="coffee" id="coffee" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="roast">Roast</label>
+            <select type="text" class="form-control" name="roast" id="roast">
+                <option>light</option>
+                <option>medium</option>
+                <option>dark</option>
+                <option>all</option>
+                <!--          Bonus Task #1:Added a fourth option to select all roasts for roast type-->
+            </select>
+            <input type="submit" id="newButton" class="custom-btn">
+        </div>
     </form>
 
     </div>
