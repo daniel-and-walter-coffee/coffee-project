@@ -159,3 +159,22 @@ let newCoffee = (e) => {
 }
 
 newButton.addEventListener('click', newCoffee)
+
+
+// ADD FORM BUTTON
+let triggerButton = document.getElementById('add-trigger')
+
+const trigger = (e) => {
+    e.preventDefault()
+    let form = document.getElementById("add-form")
+    if(form.style.display == "none"){
+        form.style.display = 'block'
+        triggerButton.innerText = "Changed your mind?"
+    } else {
+        form.style.display = "none"
+        triggerButton.innerText = "Wanna add your favorite?"
+    }
+
+}
+
+triggerButton.addEventListener('click', trigger)

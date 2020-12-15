@@ -35,7 +35,7 @@ td, th {
 
 #coffees {
     width: 95%;
-    margin: 0px auto;
+    margin: 10px auto;
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
@@ -47,4 +47,9 @@ h4 {
 
 p {
     font-size: 1.1rem;
+}
+
+/*FOR ADD FORM*/
+#add-form {
+    display: none;
 }
