@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title></title>
@@ -7,73 +8,70 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="row">
-<!--SWAPPED-->
-<div class="col-12" id="container-header">
-    <div class="container" id="header">
-        <h1 class="display-4">Coffee!</h1>
-        <hr>
-        <h3 >Java beans are great</h3>
-    </div>
-</div>
 
+<body class="row">
+<!--    TOP SECTION-->
+    <div class="container" id="container-header">
+        <div class="col-12" id="header">
+            <h1 class="display-4">Coffee!</h1>
+            <hr>
+            <h3 >Java beans are great</h3>
+        </div>
+    </div>
+
+<!--    THE SEARCH FORMS-->
     <div id="coffee-forms" class="col-12 col-md-6">
 
-    <form class="form-custom card">
-        <div class="form-group">
-            <label for="roast-selection">Search by Roast</label>
-            <select id="roast-selection" class="form-control">
-                <option>light</option>
-                <option>medium</option>
-                <option>dark</option>
-                <option>all</option>
-            </select>
-            <input id="submit" type="submit" class="custom-btn"/>
-        </div>
-    </form>
+<!--        SEARCH BY ROAST-->
+        <form class="form-custom card">
+            <div class="form-group">
+                <label for="roast-selection">Search by Roast</label>
+                <select id="roast-selection" class="form-control">
+                    <option>light</option>
+                    <option>medium</option>
+                    <option>dark</option>
+                    <option>all</option>
+                </select>
+                <input id="submit" type="submit" class="custom-btn"/>
+            </div>
+        </form>
 
-    <form class="form-custom card">
-        <div class="form-group">
-        <label for="search-input">Custom Search:</label>
+<!--        SEARCH BY TEXT-->
+        <form class="form-custom card">
+            <div class="form-group">
+                <label for="search-input">Custom Search:</label>
+                <input class="form-control" type="text" id="search-input" name="search-input" placeholder="Discover your brew">
+                <input class="custom-btn" type="submit" id="searchButton" value="Submit" >
+            </div>
+        </form>
 
-        <input class="form-control" type="text" id="search-input" name="search-input" placeholder="Discover your brew">
-            <input class="custom-btn" type="submit" id="searchButton" value="Submit" >
-        </div>
-
-<!--            <i class="fas fa-sign-in-alt"></i>        -->
-    </form>
-
-<!--    <button id="add-trigger">Wanna add your favorite?</button>-->
-    <form class="form-custom card">
-        <div class="form-group">
-            <label for="coffee">Name of Coffee</label>
-            <input type="text" name="coffee" id="coffee" class="form-control" placeholder="Name">
-        </div>
-        <div class="form-group">
-            <label for="roast">Roast</label>
-            <select type="text" class="form-control" name="roast" id="roast">
-                <option>light</option>
-                <option>medium</option>
-                <option>dark</option>
-                <option>all</option>
+<!--        ADD COFFEE-->
+        <form class="form-custom card">
+            <div class="form-group">
+                <label for="coffee">Name of Coffee</label>
+                <input type="text" name="coffee" id="coffee" class="form-control" placeholder="Name">
+            </div>
+            <div class="form-group">
+                <label for="roast">Roast</label>
+                <select type="text" class="form-control" name="roast" id="roast">
+                    <option>light</option>
+                    <option>medium</option>
+                    <option>dark</option>
+                    <option>all</option>
                 <!--          Bonus Task #1:Added a fourth option to select all roasts for roast type-->
-            </select>
-            <button type="submit" id="newButton" class="custom-btn">
-                Add
-                <span><i class="fas fa-sign-in-alt"></i></span>
-
-            </button>
+                </select>
+                <button type="submit" id="newButton" class="custom-btn">
+                    Add <span><i class="fas fa-sign-in-alt"></i></span>
+                </button>
 <!--            <input type="submit" id="newButton" class="custom-btn">-->
-        </div>
-    </form>
-
+            </div>
+        </form>
     </div>
 
-        <div class="col-12 col-md-6" id="parent">
-            <div id="coffees">
-
-            </div>
-        </div>
+<!--COFFEES DISPLAY-->
+    <div class="col-12 col-md-6" id="parent">
+        <div id="coffees"></div>
+    </div>
 
     <script src="https://kit.fontawesome.com/10517977d2.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

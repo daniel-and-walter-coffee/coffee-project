@@ -224,6 +224,6 @@ h3 {
 }
 
 #container-header {
-    background: var(--light-background);
+    /*background: var(--light-background);*/
     /*width: 100%;*/
 }
