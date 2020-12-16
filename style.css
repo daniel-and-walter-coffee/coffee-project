@@ -1,33 +1,95 @@
+/*UTILITIES*/
 :root {
     --dark-background: #393D3F;
-
     /*background: #454140;*/
     /*background: #667292;*/
 
     --med-background: #95AFBA;
-    --light-background: #e6f5ff;
-}
+    /*background: #bccad6;*/
+    /*background: #8DA7BE;;*/
+    /*background:  #92a8d1;*/
 
-/*#coffee-light {*/
-/*    background: #bccad6;*/
-/*    background: #deeaee;*/
-/*    background: #ccebff;*/
-/*    background: #e6f5ff;*/
-/*}*/
+    --light-background: #e6f5ff;
+    /*    background: #bccad6;*/
+    /*    background: #deeaee;*/
+    /*    background: #ccebff;*/
+    /*    background: #e6f5ff;*/
+}
 
 body {
     margin: 0;
 }
-table {
-    border-collapse: collapse;
-    margin: 15px 0;
+
+h4 {
+    font-size: 1.5rem;
 }
 
-td, th {
-    border: 1px solid black;
-    padding: 5px 10px;
+p {
+    font-size: 1.1rem;
 }
 
+.custom-btn {
+    margin-top: 10px;
+    width: 70px;
+    height: 40px;
+    background: white;
+    transition: transform 0.75s ease;
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+}
+
+.form-control {
+    background: lightsteelblue;
+}
+
+.form-control:focus {
+    border: 2px solid black;
+}
+
+.custom-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 15px black;
+}
+
+.form-custom {
+    max-width: 400px;
+    padding: 10px;
+    border: 2px solid black;
+    margin: 5px auto;
+}
+
+/*TOP SECTION*/
+h1 {
+    display: flex;
+    justify-content: center;
+    font-family: Impact;
+}
+
+h3 {
+    display: flex;
+    justify-content: center;
+    font-family: Baskerville;
+}
+
+#header {
+    /*width: 50%;*/
+    /*height: 120px;*/
+    margin-bottom: 20px;
+    border-style: groove;
+    border-radius: 25px;
+    border-color: lightskyblue;
+}
+
+/*SEARCHSECTION*/
+#coffee-forms {
+    padding: 10px;
+    margin: 0px auto;
+    background: var(--med-background);
+}
+
+
+/*COFFEES SECTION*/
 .coffee {
     display: flex;
     padding: 10px;
@@ -68,71 +130,9 @@ td, th {
     min-height: 606px;
     background: var(--dark-background);
     color: white;
-
-
     width: 95%;
     margin: 0px auto;
 }
-
-#coffee-forms {
-    padding: 10px;
-    margin: 0px auto;
-
-    /*background: #bccad6;*/
-    /*background: #8DA7BE;;*/
-    /*background:  #92a8d1;*/
-    background: var(--med-background);
-}
-
-h4 {
-    font-size: 1.5rem;
-}
-
-p {
-    font-size: 1.1rem;
-}
-
-/*FORM CUSTOM*/
-.form-custom {
-    max-width: 400px;
-    /*height: 150px;*/
-    padding: 10px;
-    /*margin-bottom: 200px;*/
-    border: 2px solid black;
-    margin: 5px auto;
-}
-
-.custom-btn {
-    margin-top: 10px;
-    width: 70px;
-    height: 40px;
-    background: white;
-    transition: transform 0.75s ease;
-    border: 2px solid black;
-    display: flex;
-    align-items: center;
-}
-
-.form-control {
-    background: lightsteelblue;
-}
-
-.form-control:focus {
-    /*transform: scale(1.1);*/
-    /*box-shadow: 0px 0px 10px black;*/
-    border: 2px solid black;
-}
-
-.custom-btn:hover {
-    transform: scale(1.1);
-    box-shadow: 0px 0px 15px black;
-}
-
-/*FOR ADD FORM*/
-/*#add-form {*/
-/*    display: none;*/
-/*}*/
-
 
 /*SECOND FORM STYLING*/
 .discover-brew {
@@ -197,33 +197,4 @@ p {
     -webkit-box-shadow: inset 0 0 10px #000000;
     box-shadow:         inset 0 0 10px #000000;
     border-radius: 25px;
-}
-
-h1 {
-    display: flex;
-    justify-content: center;
-    font-family: Impact;
-}
-
-h3 {
-    display: flex;
-    justify-content: center;
-    font-family: Baskerville;
-
-}
-
-#header {
-    /*width: 50%;*/
-    /*height: 120px;*/
-    margin-bottom: 20px;
-    border-style: groove;
-    border-radius: 25px;
-    border-color: lightskyblue;
-
-
-}
-
-#container-header {
-    /*background: var(--light-background);*/
-    /*width: 100%;*/
 }
