@@ -28,6 +28,10 @@ p {
     font-size: 1.1rem;
 }
 
+#container-header {
+    background: var(--light-background);
+}
+
 .custom-btn {
     margin-top: 10px;
     width: 70px;
