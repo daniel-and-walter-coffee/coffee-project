@@ -82,7 +82,7 @@ h3 {
     margin-bottom: 20px;
     border-style: groove;
     border-radius: 25px;
-    border-color: lightskyblue;
+    border-color: var(--dark-background);
 }
 
 /*SEARCHSECTION*/
