@@ -126,6 +126,10 @@ function updateOption() {
 
     var selectedRoast = roastSelection.value;
     var filteredCoffees = [];
+    if (selectedRoast == "all"){
+        tbody.innerHTML = renderCoffees(coffees);
+        return
+    }
     coffees.forEach(function(coffee) {
         if (coffee.roast === selectedRoast) {
             filteredCoffees.push(coffee);

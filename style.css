@@ -109,6 +109,8 @@ p {
     background: white;
     transition: transform 0.75s ease;
     border: 2px solid black;
+    display: flex;
+    align-items: center;
 }
 
 .form-control {
