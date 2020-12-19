@@ -1,7 +1,9 @@
 "use strict"
 
 function renderCoffee(coffee) {
-    var html = '<div class="coffee">';
+    let CoffeeId = coffee.id.toString()
+
+    var html = `<div class="coffee" id=coffee-${CoffeeId}>`;
     html += '<h4>' + coffee.name + '</h4>';
     html += '<p>' + coffee.roast + '</p>';
     html += '</div>';
@@ -185,3 +187,11 @@ newButton.addEventListener('click', newCoffee)
 // }
 //
 // triggerButton.addEventListener('click', trigger)
+
+// let toDelete = document.getElementById("coffee-22")
+
+// console.log(toDelete.id)
+
+let deleteCoffee = (coffee) => {
+    let filtere
+}
